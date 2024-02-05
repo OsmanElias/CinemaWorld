@@ -49,7 +49,7 @@ npm start
 
 
 
-Usage:
+### Usage
 After starting the server, navigate to http://localhost:3000 to access CinemaWorld.
 
 /login: Log in to your account.
@@ -58,7 +58,7 @@ After starting the server, navigate to http://localhost:3000 to access CinemaWor
 
 
 
-Contributing:
+### Contributing
 If you'd like to contribute to CinemaWorld, please fork the repository and create a pull request with your changes. You can also simply open an issue with the tag "enhancement".
 
 Fork the Project
