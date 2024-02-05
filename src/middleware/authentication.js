@@ -27,7 +27,6 @@ async (email, password, done) => {
     }
 
     console.log("User found, comparing password");
-    // Use await to wait for the promise to resolve
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
       console.log("Password does not match");
@@ -64,9 +63,9 @@ module.exports = {
     initialize: () => passport.initialize(),
     session: () => passport.session(),
     authenticate: () => passport.authenticate('local', {
-      session: true, // Enable sessions
-      successRedirect: '/', // Redirect on successful login
-      failureRedirect: '/login', // Redirect on failed login
+      session: true, 
+      successRedirect: '/', 
+      failureRedirect: '/login', 
       failureFlash: false, 
     }),
   };

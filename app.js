@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'src', 'public')));
 app.use(session({
   secret: process.env.SECRET_KEY, 
   resave: false, // Avoid resaving sessions that haven't been modified
-  saveUninitialized: false, // Don't save an uninitialized session
+  saveUninitialized: false, 
   cookie: { secure: 'false', httpOnly: true } // Use secure cookies 
 }));
 
@@ -42,7 +42,7 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 const authMiddleware = require('./src/middleware/authentication');
 
-// Assuming authentication.js exports functions correctly 
+
 app.use(authMiddleware.initialize());
 app.use(authMiddleware.session());
 
@@ -74,21 +74,18 @@ function ensureAuthenticated(req, res, next) {
   res.redirect('/login');
 }
 
-app.get('/protected', ensureAuthenticated, (req, res) => {
-  res.send('You have successfully accessed a protected route!');
-});
 
-//index page
+
 app.get('/', ensureAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'public', 'index.html'));
 });
 
-// Serving login.html directly for the '/login' route
+
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'public', 'login.html'));
 });
 
-// Assuming you also have a register.html in your 'src/public' directory
+
 app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'public', 'register.html'));
 });

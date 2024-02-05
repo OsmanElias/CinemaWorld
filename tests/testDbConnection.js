@@ -32,8 +32,8 @@ mongoose.connection.on('disconnected', () => {
   console.log('Mongoose disconnected.');
 });
 
-// Simple model test (optional)
-const User = require('../src/models/User'); // Adjust path as necessary
+
+const User = require('../src/models/User'); 
 User.find({})
   .then(users => {
     console.log('Found users:', users);

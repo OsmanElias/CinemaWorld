@@ -30,8 +30,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
   },
-  // Add any other user-related fields as needed
 });
+
+
 
 // Hash the user's password before saving to the database
 userSchema.pre('save', async function (next) {
