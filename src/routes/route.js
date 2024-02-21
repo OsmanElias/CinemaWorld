@@ -1,14 +1,50 @@
-// routes/route.js
+// route.js
 const express = require('express');
 const router = express.Router();
+const passport = require('passport');
+const path = require('path');
+const User = require('../models/User'); 
 
-// Assuming you have some controller functions you've imported
-const { loginUser, registerUser, dashboard } = require('../controllers/userController');
+// Your authentication middleware
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect('/login');
+}
 
-// Define routes
-router.post('/login', loginUser);
-router.post('/register', registerUser);
-router.get('/dashboard', dashboard);
+router.get('/', ensureAuthenticated, (req, res) => {
+  res.sendFile(path.join(__dirname, '..','..', 'public', 'index.html'));
+});
 
-// Export the router
+router.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', '..', 'public', 'login.html'));
+  });
+
+  router.get('/register', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', '..', 'public', 'register.html'));
+  });
+
+// Include your registration logic here
+router.post('/register', async (req, res) => {
+    try {
+        const newUser = new User(req.body);
+        await newUser.save();
+        res.redirect('/login'); // Redirect to login on successful registration
+      } catch (error) {
+        // Check for duplicate key error
+        if (error.code === 11000) {
+          return res.status(400).send("Email or username already exists.");
+        }
+        console.error(error); // Log the error for debugging
+        return res.status(500).send("An error occurred.");
+      }
+});
+
+router.post('/login', passport.authenticate('local', {
+  successRedirect: '/',
+  failureRedirect: '/login',
+  failureFlash: false
+}));
+
 module.exports = router;
