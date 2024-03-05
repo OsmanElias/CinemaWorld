@@ -5,7 +5,7 @@ const passport = require('passport');
 const path = require('path');
 const User = require('../models/User'); 
 
-// Your authentication middleware
+//Middleware authenticating
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
@@ -25,7 +25,7 @@ router.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, '..', '..', 'public', 'register.html'));
   });
 
-// Include your registration logic here
+
 router.post('/register', async (req, res) => {
     try {
         const newUser = new User(req.body);
