@@ -62,8 +62,11 @@
                             const overview = currentMovie.overview;
                             const releaseDate = currentMovie.release_date;
                             const posterImage = currentMovie.poster_path;
-                  
-                            //outputHTML += ["Title: " + title + " Overview: " + overview + " Release Date: " + releaseDate + " Poster Path: " + posterImage + " "];
+                            
+                            //OUTPUTS DATA BUT CANNOT BE SPECIFICALLY FORMATTED
+                            outputHTML += ["Title: " + title + " Overview: " + overview + " Release Date: " + releaseDate + " Poster Path: " + posterImage + " "];
+                           
+                            //OUTPUTS DATA AS SPECIFIED I.E "${title}" NOT TITLE AS A HEADER
                             outputHTML += "<h2>${title}</h2>";
                         }
 
