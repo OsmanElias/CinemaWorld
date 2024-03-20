@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CinemaWorld - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+zO3qoEYwL+5n8TV7LFNJPJ6BhqO0iFMO5rIl2ODCZsDZFd6A8kCK4abVUeC7b7b" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+zO3qoEYwL+5n8TV7LFNJPJ6BhqO0iFMO5rIl2ODCZsDZFd6A8kCK4abVUeC7b7b" crossorigin="anonymous">
     <style>
         body {
             padding-top: 80px;
         }
+
         .header {
             background: #007bff;
             color: #fff;
@@ -17,13 +20,213 @@
         }
     </style>
 </head>
+
 <body>
+    <script>
+        function getAuthorizaiton() {
+            return options = {
+                method: 'GET',
+                headers: {
+                    accept: 'application/json',
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkN2RkNzc4ZDJmMzQxYzA5NjY2MmY5ZjQ0MjYzYjY0ZSIsInN1YiI6IjY1YzUwNjU0MTk0MTg2MDE2Mjc1ZTA2YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3pn0_lr-lCIVOigU8uHz6BcWtEGSXbSsQlbASJgoL84'
+                }
+            };
+        }
+
+        function getGenresData () {
+            return {
+                "genres": [
+                    {
+                        "id": 28,
+                        "name": "Action"
+                    },
+                    {
+                        "id": 12,
+                        "name": "Adventure"
+                    },
+                    {
+                        "id": 16,
+                        "name": "Animation"
+                    },
+                    {
+                        "id": 35,
+                        "name": "Comedy"
+                    },
+                    {
+                        "id": 80,
+                        "name": "Crime"
+                    },
+                    {
+                        "id": 99,
+                        "name": "Documentary"
+                    },
+                    {
+                        "id": 18,
+                        "name": "Drama"
+                    },
+                    {
+                        "id": 10751,
+                        "name": "Family"
+                    },
+                    {
+                        "id": 14,
+                        "name": "Fantasy"
+                    },
+                    {
+                        "id": 36,
+                        "name": "History"
+                    },
+                    {
+                        "id": 27,
+                        "name": "Horror"
+                    },
+                    {
+                        "id": 10402,
+                        "name": "Music"
+                    },
+                    {
+                        "id": 9648,
+                        "name": "Mystery"
+                    },
+                    {
+                        "id": 10749,
+                        "name": "Romance"
+                    },
+                    {
+                        "id": 878,
+                        "name": "Science Fiction"
+                    },
+                    {
+                        "id": 10770,
+                        "name": "TV Movie"
+                    },
+                    {
+                        "id": 53,
+                        "name": "Thriller"
+                    },
+                    {
+                        "id": 10752,
+                        "name": "War"
+                    },
+                    {
+                        "id": 37,
+                        "name": "Western"
+                    }
+                ]
+            };
+        }
+
+        function mapGenres (currentMovie) {
+            const genresJSONData = getGenresData ();
+
+            const genresData = genresJSONData.genres; // Accesses the "genres" array
+
+            let genreNames = [];
+
+            for (let i = 0; i < currentMovie.genre_ids.length; i++) {
+                for (let j = 0; j < genresData.length; j++) {
+                    if (genresData[j].id === currentMovie.genre_ids[i]) {
+                        genreNames += genresData[j].name + ", ";
+                    }
+                }
+            }
+
+            return genreNames.slice (0, -2);
+        }
+
+        function printMovies() {
+            const url = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
+
+            fetch(url, getAuthorizaiton())
+                .then(response => {
+                    return response.text();
+                })
+                .then(data => {
+                    const JSONdata = JSON.parse(data);
+
+                    let outputHTML = '';
+
+                    for (let i = 0; i < JSONdata.results.length; i++) {
+                        const currentMovie = JSONdata.results[i];
+
+                        const title = currentMovie.title;
+                        const overview = currentMovie.overview;
+                        const releaseDate = currentMovie.release_date;
+                        const rating = Math.trunc(currentMovie.vote_average);
+                        const posterPath = "https://image.tmdb.org/t/p/w185" + currentMovie.poster_path;
+                        const genres = mapGenres (currentMovie);
+
+                        //OUTPUTS MOVIE DATA
+                        outputHTML += '<img src=' + posterPath + ' alt=' + title + 'poster' +
+                            ' width="160" height="230">' + '<h2>' + title + '</h2>' + '<p>Genre (s): ' + genres + '</p>' +
+                            '<p> Rating: ' + rating + '/10</p>' + '<p>Release Date: ' + releaseDate + '</p>' + '<p>Overview: ' + overview + '</p>';
+                    }
+                    document.getElementById('trending').innerHTML = outputHTML;
+                })
+                .catch(error => console.error("Error fetching the data:", error));
+        }    
+    </script>
+
     <div class="header">
         <h1>Welcome to CinemaWorld</h1>
         <p>Your one-stop destination for all things cinema.</p>
     </div>
 
     <div class="container">
+        <div class="sort-filter-menu">
+            <span>Sort By:</span>
+            <select id="sort-select">
+                <option value="title-asc">Title (A-Z)</option>
+                <option value="title-desc">Title (Z-A)</option>
+                <option value="date-asc">Release Date (Newest)</option>
+                <option value="date-desc">Release Date (Oldest)</option>
+                <option value="rating-asc">Rating (Ascending)</option>
+                <option value="rating-desc">Rating (Descending)</option>
+            </select>
+            <span>Filter By:</span>
+            <select id="filter-select">
+                <option value="all">All</option>
+                <option value="genre-action">Action</option>
+                <option value="genre-adventure">Adventure</option>
+                <option value="genre-animation">Animation</option>
+                <option value="genre-comedy">Comedy</option>
+                <option value="genre-crime">Crime</option>
+                <option value="genre-documentary">Documentary</option>
+                <option value="genre-drama">Drama</option>
+                <option value="genre-family">Family</option>
+                <option value="genre-fantasy">Fantasy</option>
+                <option value="genre-history">History</option>
+                <option value="genre-horror">Horror</option>
+                <option value="genre-music">Music</option>
+                <option value="genre-mystery">Mystery</option>
+                <option value="genre-romance">Romance</option>
+                <option value="genre-science_fiction">Science Fiction</option>
+                <option value="genre-tv_movie">TV Movie</option>
+                <option value="genre-thriller">Thriller</option>
+                <option value="genre-war">War</option>
+                <option value="genre-western">Western</option>
+            </select>
+        </div>
+
+        <script>
+            const sortSelect = document.getElementById("sort-select");
+            const filterSelect = document.getElementById("filter-select");
+
+            sortSelect.addEventListener("change", function () {
+                const selectedSort = this.value;
+                // Implement your sorting logic here based on selectedSort value
+            });
+
+            filterSelect.addEventListener("change", function () {
+                const selectedFilter = this.value;
+
+
+
+                printMovies();
+            });
+
+        </script>
+
         <div class="row">
             <div class="col text-center mt-4">
                 <a href="/login.html" class="btn btn-primary">Login</a>
@@ -33,58 +236,22 @@
         <div class="row">
             <div class="col">
                 <h2>About Us</h2>
-                <p>CinemaWorld is a platform dedicated to movie enthusiasts around the globe. Discover movies, explore actor filmographies, and connect with other fans.</p>
+                <p>CinemaWorld is a platform dedicated to movie enthusiasts around the globe. Discover movies, explore
+                    actor filmographies, and connect with other fans.</p>
             </div>
             <div class="col">
                 <h2>Explore</h2>
                 <p>Browse our extensive database of movies and actors. Dive deep into the world of cinema with us.</p>
             </div>
+
             <h2>Trending</h2>
+
             <div id="trending"></div>
-                <script>
-                    const url = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
-
-                    const options = {
-                    method: 'GET',
-                    headers: {
-                        accept: 'application/json',
-                        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkN2RkNzc4ZDJmMzQxYzA5NjY2MmY5ZjQ0MjYzYjY0ZSIsInN1YiI6IjY1YzUwNjU0MTk0MTg2MDE2Mjc1ZTA2YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3pn0_lr-lCIVOigU8uHz6BcWtEGSXbSsQlbASJgoL84'
-                    }
-                    };
-
-                    fetch(url, options)
-                      .then(response => {
-                            return response.text();
-                        })
-                      .then(data => {
-                        const JSONdata = JSON.parse(data);
-                        
-                        const API_KEY = "d7dd778d2f341c096662f9f44263b64e";
-
-                        let outputHTML = '';
-                  
-                        for (let i = 0; i < JSONdata.results.length; i++) {
-                            const currentMovie = JSONdata.results[i];
-
-                            const title = currentMovie.title;
-                            const overview = currentMovie.overview;
-                            const releaseDate = currentMovie.release_date;
-                            const rating = Math.trunc(currentMovie.vote_average);
-                            const posterPath = "https://image.tmdb.org/t/p/w185" + currentMovie.poster_path;
-                            
-                            //OUTPUTS DATA AS SPECIFIED
-                            outputHTML += '<img src=' + posterPath + ' alt=' + title + 'poster' + 
-                                ' width="220" height="360">' + '<h2>' + title + '</h2>' + '<p> Rating: ' + 
-                                rating + '</p>' + '<p>Release Date: ' + releaseDate + '</p>' + '<p>Overview: ' + overview + '</p>';
-                        }
-                        document.getElementById('trending').innerHTML = outputHTML;
-                      })
-                      .catch(error => console.error("Error fetching the data:", error));
-                </script>
-            </div>
+            <script> printMovies(); </script>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjyIOiIO+9InQ5PeFwZOY4Dx7n5TTLmGl7ejp5H5D2AgUq9+OiAZ5l" crossorigin="anonymous"></script>
 </body>
+
 </html>
