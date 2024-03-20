@@ -15,6 +15,13 @@
             padding: 20px;
             text-align: center;
         }
+         #trending .movie {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -71,11 +78,15 @@
                             const releaseDate = currentMovie.release_date;
                             const rating = Math.trunc(currentMovie.vote_average);
                             const posterPath = "https://image.tmdb.org/t/p/w185" + currentMovie.poster_path;
-                            
+                          
                             //OUTPUTS DATA AS SPECIFIED
-                            outputHTML += '<img src=' + posterPath + ' alt=' + title + 'poster' + 
-                                ' width="220" height="360">' + '<h2>' + title + '</h2>' + '<p> Rating: ' + 
-                                rating + '</p>' + '<p>Release Date: ' + releaseDate + '</p>' + '<p>Overview: ' + overview + '</p>';
+                            outputHTML += `<div class="movie">
+                                <img src="${posterPath}" alt="${title} poster" width="220" height="360">
+                                <h2>${title}</h2>
+                                <p>Rating: ${rating}</p>
+                                <p>Release Date: ${releaseDate}</p>
+                                <p>Overview: ${overview}</p>
+                            </div>`;
                         }
                         document.getElementById('trending').innerHTML = outputHTML;
                       })
