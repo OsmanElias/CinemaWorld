@@ -1,0 +1,419 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/j1YJz13FzfJFeUsfekP1QBU7KJs.jpg",
+      "id": 763215,
+      "title": "Damsel",
+      "original_language": "en",
+      "original_title": "Damsel",
+      "overview": "A young woman agrees to marry a handsome prince -- only to discover it was all a trap. She is thrown into a cave with a fire-breathing dragon and must rely solely on her wits and will to survive.",
+      "poster_path": "/sMp34cNKjIb18UBOCoAv4DpCxwY.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        14,
+        28,
+        12
+      ],
+      "popularity": 134.625,
+      "release_date": "2024-03-08",
+      "video": false,
+      "vote_average": 7,
+      "vote_count": 24
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/syozWkk4Qi4s9RWefcfwCmBqRrt.jpg",
+      "id": 1022690,
+      "title": "Ricky Stanicky",
+      "original_language": "en",
+      "original_title": "Ricky Stanicky",
+      "overview": "When three childhood best friends pull a prank gone wrong, they invent the imaginary Ricky Stanicky to get them out of trouble. Twenty years later, the trio still uses the nonexistent Ricky as a handy alibi for their immature behavior. But when their spouses and partners get suspicious and demand to finally meet the fabled Mr. Stanicky, the guilty trio decide to hire a washed-up actor and raunchy celebrity impersonator to bring him to life.",
+      "poster_path": "/oJQdLfrpl4CQsHAKIxd3DJqYTVq.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 38.29,
+      "release_date": "2024-02-21",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 26
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xvk5AhfhgQcTuaCQyq3XqAnhEma.jpg",
+      "id": 848538,
+      "title": "Argylle",
+      "original_language": "en",
+      "original_title": "Argylle",
+      "overview": "When the plots of reclusive author Elly Conway's fictional espionage novels begin to mirror the covert actions of a real-life spy organization, quiet evenings at home become a thing of the past. Accompanied by her cat Alfie and Aiden, a cat-allergic spy, Elly races across the world to stay one step ahead of the killers as the line between Conway's fictional world and her real one begins to blur.",
+      "poster_path": "/95VlSEfLMqeX36UVcHJuNlWEpwf.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        28,
+        53,
+        35
+      ],
+      "popularity": 304.359,
+      "release_date": "2024-01-31",
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 401
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xOMo8BRK7PfcJv9JCnx7s5hj0PX.jpg",
+      "id": 693134,
+      "title": "Dune: Part Two",
+      "original_language": "en",
+      "original_title": "Dune: Part Two",
+      "overview": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.",
+      "poster_path": "/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "popularity": 1265.804,
+      "release_date": "2024-02-27",
+      "video": false,
+      "vote_average": 8.4,
+      "vote_count": 1042
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/o6e8Y0Q7RZIWi4qcJq4s5OYOVJs.jpg",
+      "id": 792307,
+      "title": "Poor Things",
+      "original_language": "en",
+      "original_title": "Poor Things",
+      "overview": "Brought back to life by an unorthodox scientist, a young woman runs off with a debauched lawyer on a whirlwind adventure across the continents. Free from the prejudices of her times, she grows steadfast in her purpose to stand for equality and liberation.",
+      "poster_path": "/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        878,
+        10749,
+        35
+      ],
+      "popularity": 976.8,
+      "release_date": "2023-12-07",
+      "video": false,
+      "vote_average": 7.97,
+      "vote_count": 1887
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/lzWHmYdfeFiMIY4JaMmtR7GEli3.jpg",
+      "id": 438631,
+      "title": "Dune",
+      "original_language": "en",
+      "original_title": "Dune",
+      "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity's greatest potential-only those who can conquer their fear will survive.",
+      "poster_path": "/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        878,
+        12
+      ],
+      "popularity": 738.715,
+      "release_date": "2021-09-15",
+      "video": false,
+      "vote_average": 7.788,
+      "vote_count": 10561
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fCwwzOziFYs7YRwP4gbrb9qH1xg.jpg",
+      "id": 1011985,
+      "title": "Kung Fu Panda 4",
+      "original_language": "en",
+      "original_title": "Kung Fu Panda 4",
+      "overview": "Po is gearing up to become the spiritual leader of his Valley of Peace, but also needs someone to take his place as Dragon Warrior. As such, he will train a new kung fu practitioner for the spot and will encounter a villain called the Chameleon who conjures villains from the past.",
+      "poster_path": "/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        28,
+        12,
+        16,
+        35,
+        10751
+      ],
+      "popularity": 815.015,
+      "release_date": "2024-03-02",
+      "video": false,
+      "vote_average": 7.125,
+      "vote_count": 16
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/gzlprPDmKCS4bUT4BxQZmJfpMX9.jpg",
+      "id": 636706,
+      "title": "Spaceman",
+      "original_language": "en",
+      "original_title": "Spaceman",
+      "overview": "During a research mission, an astronaut discovers that his marriage is in trouble. Luckily, he has the help of a mysterious creature hidden in his ship.",
+      "poster_path": "/5hnFFOWEchErNVr0wMLWFEob3q1.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        878,
+        18
+      ],
+      "popularity": 584.143,
+      "release_date": "2024-02-23",
+      "video": false,
+      "vote_average": 6.657,
+      "vote_count": 214
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nTPFkLUARmo1bYHfkfdNpRKgEOs.jpg",
+      "id": 1072790,
+      "title": "Anyone But You",
+      "original_language": "en",
+      "original_title": "Anyone But You",
+      "overview": "After an amazing first date, Bea and Ben’s fiery attraction turns ice cold — until they find themselves unexpectedly reunited at a destination wedding in Australia. So they do what any two mature adults would do: pretend to be a couple.",
+      "poster_path": "/yRt7MGBElkLQOYRvLTT1b3B1rcp.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "popularity": 932.844,
+      "release_date": "2023-12-21",
+      "video": false,
+      "vote_average": 6.962,
+      "vote_count": 862
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cu5Qk2QHxOyyMrD3Bq93DxgmJer.jpg",
+      "id": 1046090,
+      "title": "The Pig, the Snake and the Pigeon",
+      "original_language": "zh",
+      "original_title": "周處除三害",
+      "overview": "The arrogant, third most-wanted criminal in Taiwan, decides to get rid of the top two competitors and crowns himself the most-wanted criminal before dying.",
+      "poster_path": "/7IJ7F8tX7IAkpUdaGovOBJqORnJ.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        28,
+        80
+      ],
+      "popularity": 139.527,
+      "release_date": "2023-10-06",
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 50
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yyFc8Iclt2jxPmLztbP617xXllT.jpg",
+      "id": 787699,
+      "title": "Wonka",
+      "original_language": "en",
+      "original_title": "Wonka",
+      "overview": "Willy Wonka – chock-full of ideas and determined to change the world one delectable bite at a time – is proof that the best things in life begin with a dream, and if you’re lucky enough to meet Willy Wonka, anything is possible.",
+      "poster_path": "/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        35,
+        10751,
+        14
+      ],
+      "popularity": 583.612,
+      "release_date": "2023-12-06",
+      "video": false,
+      "vote_average": 7.201,
+      "vote_count": 2393
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg",
+      "id": 872585,
+      "title": "Oppenheimer",
+      "original_language": "en",
+      "original_title": "Oppenheimer",
+      "overview": "The story of J. Robert Oppenheimer's role in the development of the atomic bomb during World War II.",
+      "poster_path": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        18,
+        36
+      ],
+      "popularity": 337.453,
+      "release_date": "2023-07-19",
+      "video": false,
+      "vote_average": 8.114,
+      "vote_count": 6978
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6SLyu9ygASsrOqkCpjAwtyG9PWW.jpg",
+      "id": 1094556,
+      "title": "The Thundermans Return",
+      "original_language": "en",
+      "original_title": "The Thundermans Return",
+      "overview": "Twins Phoebe and Max are enjoying their superhero lifestyle, but when one 'save' goes awry, the Thundermans are sent back to Hiddenville. While Hank and Barb enjoy their return, and Billy and Nora look forward to a normal high school life, Max and Phoebe are determined to regain their superhero status.",
+      "poster_path": "/2J5eeroLDY0d45mVjpuGhcLZs3W.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        10751,
+        878,
+        28,
+        35
+      ],
+      "popularity": 121.152,
+      "release_date": "2024-03-07",
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fGe1ej335XbqN1j9teoDpofpbLX.jpg",
+      "id": 915935,
+      "title": "Anatomy of a Fall",
+      "original_language": "fr",
+      "original_title": "Anatomie d'une chute",
+      "overview": "A woman is suspected of her husband’s murder, and their blind son faces a moral dilemma as the sole witness.",
+      "poster_path": "/kQs6keheMwCxJxrzV83VUwFtHkB.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        53,
+        9648,
+        80
+      ],
+      "popularity": 147.078,
+      "release_date": "2023-08-23",
+      "video": false,
+      "vote_average": 7.676,
+      "vote_count": 1274
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aPQsU3yLDUOhLJYnSqkhKRkQTAw.jpg",
+      "id": 467244,
+      "title": "The Zone of Interest",
+      "original_language": "en",
+      "original_title": "The Zone of Interest",
+      "overview": "The commandant of Auschwitz, Rudolf Höss, and his wife Hedwig, strive to build a dream life for their family in a house and garden next to the camp.",
+      "poster_path": "/hUu9zyZmDd8VZegKi1iK1Vk0RYS.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        36,
+        18,
+        10752
+      ],
+      "popularity": 173.673,
+      "release_date": "2023-12-15",
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 658
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/57fhbxl9is7W7ur5v6UuvlNsoSg.jpg",
+      "id": 840430,
+      "title": "The Holdovers",
+      "original_language": "en",
+      "original_title": "The Holdovers",
+      "overview": "A curmudgeonly instructor at a New England prep school is forced to remain on campus during Christmas break to babysit the handful of students with nowhere to go. Eventually, he forms an unlikely bond with one of them — a damaged, brainy troublemaker — and with the school’s head cook, who has just lost a son in Vietnam.",
+      "poster_path": "/VHSzNBTwxV8vh7wylo7O9CLdac.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "popularity": 108.971,
+      "release_date": "2023-10-27",
+      "video": false,
+      "vote_average": 7.763,
+      "vote_count": 919
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/dmiN2rakG9hZW04Xx7mHOoHTOyD.jpg",
+      "id": 673593,
+      "title": "Mean Girls",
+      "original_language": "en",
+      "original_title": "Mean Girls",
+      "overview": "New student Cady Heron is welcomed into the top of the social food chain by the elite group of popular girls called ‘The Plastics,’ ruled by the conniving queen bee Regina George and her minions Gretchen and Karen. However, when Cady makes the major misstep of falling for Regina’s ex-boyfriend Aaron Samuels, she finds herself prey in Regina’s crosshairs. As Cady sets to take down the group’s apex predator with the help of her outcast friends Janis and Damian, she must learn how to stay true to herself while navigating the most cutthroat jungle of all: high school.",
+      "poster_path": "/fbbj3viSUDEGT1fFFMNpHP1iUjw.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        35
+      ],
+      "popularity": 285.621,
+      "release_date": "2024-01-10",
+      "video": false,
+      "vote_average": 6.336,
+      "vote_count": 244
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ekRp1sEA8pnuzVHQkUESTgNSKdW.jpg",
+      "id": 932420,
+      "title": "Code 8 Part II",
+      "original_language": "en",
+      "original_title": "Code 8 Part II",
+      "overview": "In a world where superpowered people are heavily policed by robots, an ex-con teams up with a drug lord he despises to protect a teen from a corrupt cop.",
+      "poster_path": "/hhvMTxlTZtnCOe7YFhod9uz3m37.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        878,
+        28,
+        80
+      ],
+      "popularity": 1222.829,
+      "release_date": "2024-02-27",
+      "video": false,
+      "vote_average": 6.588,
+      "vote_count": 176
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg",
+      "id": 346698,
+      "title": "Barbie",
+      "original_language": "en",
+      "original_title": "Barbie",
+      "overview": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
+      "poster_path": "/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        35,
+        12
+      ],
+      "popularity": 274.599,
+      "release_date": "2023-07-06",
+      "video": false,
+      "vote_average": 7.104,
+      "vote_count": 7637
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bckxSN9ueOgm0gJpVJmPQrecWul.jpg",
+      "id": 572802,
+      "title": "Aquaman and the Lost Kingdom",
+      "original_language": "en",
+      "original_title": "Aquaman and the Lost Kingdom",
+      "overview": "Black Manta seeks revenge on Aquaman for his father's death. Wielding the Black Trident's power, he becomes a formidable foe. To defend Atlantis, Aquaman forges an alliance with his imprisoned brother. They must protect the kingdom.",
+      "poster_path": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        28,
+        12,
+        14
+      ],
+      "popularity": 338.587,
+      "release_date": "2023-12-20",
+      "video": false,
+      "vote_average": 6.8,
+      "vote_count": 1968
+    }
+  ],
+  "total_pages": 1000,
+  "total_results": 20000
+}

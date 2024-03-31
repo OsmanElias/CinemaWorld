@@ -33,6 +33,3 @@ async function searchAndDisplayMovie(movieTitle) {
     console.log('ERROR searching for movie');
   }
 }
-
-
-

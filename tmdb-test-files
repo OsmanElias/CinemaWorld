@@ -1,0 +1,15 @@
+const fetch = require('node-fetch');
+
+const url = 'https://api.themoviedb.org/3/authentication';
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer A1bb4c9c58ef3e696b237e2da94f26f7'
+  }
+};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error('error:' + err));
