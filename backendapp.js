@@ -1,12 +1,12 @@
 /**
- * app.js
+ * backendapp.js
  * 
  * CinemaWorld February 4th, 2024
  * 
  * Osman Elias
  * 
  * 
- *  app file to run application
+ *  backendapp file to run application
  * 
  */
 
@@ -28,8 +28,8 @@ const apiRoutes = require('./src/routes/api');
 
 const app = express();
 
-app.use(helmet()); // Set security-related HTTP headers
-app.use(rateLimit({ // Basic rate-limiting middleware
+app.use(helmet()); //Security-related HTTP headers
+app.use(rateLimit({ // Basic rate-limiting 
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100 // Limit each IP to 100 requests per windowMs
 }));
@@ -40,6 +40,12 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false, httpOnly: true }
 }));
+
+app.get('*', function(request, response) {
+  response.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+});
+
+
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
